@@ -10,10 +10,17 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
       home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
+        appBar: AppBar(title: const Text('Model Viewer')),
+        body: const ModelViewer(
+          backgroundColor: Color.fromARGB(0xFF, 0xEE, 0xEE, 0xEE),
+          src: 'https://modelviewer.dev/shared-assets/models/Astronaut.glb',
+          alt: 'A 3D model of an astronaut',
+          ar: true,
+          autoRotate: true,
+          iosSrc: 'https://modelviewer.dev/shared-assets/models/Astronaut.usdz',
+          disableZoom: true,
         ),
       ),
     );
